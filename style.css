@@ -37,9 +37,103 @@
     
 }
 
+
+/* Sección general "Acerca de nosotros" */
+.about-us {
+    display: flex;
+    flex-direction: column; /* Asegura que las secciones estén en columnas */
+    gap: 20px; /* Espaciado entre el cuadro grande y el contenedor de cuadros pequeños */
+    padding: 30px 10%;
+}
+
+/* Cuadro grande - Independiente */
+.big-box {
+    height: 300px; /* Tamaño inicial */
+    width: 100%; /* Ocupa todo el ancho */
+    border: 5px solid #28b463; /* Borde verde */
+    background-color: #f8f9f9; /* Fondo claro */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Habilita flexbox */
+    flex-direction: column; /* Asegura que el contenido esté en columnas */
+    justify-content: space-between; /* Espaciado entre título y texto */
+    align-items: center; /* Centrado horizontal */
+    text-align: center; /* Texto centrado */
+    border-radius: 12px; /* Bordes redondeados */
+}
+
+.large-title {
+    font-size: 200%; /* Tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior del título */
+    color: #28b463; /* Color del título */
+}
+
+.large-text {
+    font-size: 150%; /* Tamaño del texto */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    color: #333; /* Color del texto */
+    margin-top: 10px; /* Espaciado superior del texto */
+}
+
+/* Contenedor de cuadros pequeños */
+.small-boxes {
+    display: grid; /* Usa grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales en pantallas grandes */
+    gap: 20px; /* Espaciado entre los cuadros */
+    margin-top: 20px; /* Espaciado superior respecto al cuadro grande */
+    
+}
+
+/* Cuadros pequeños */
+.small-box {
+    height: 200px; /* Tamaño inicial */
+    border: 5px solid #28b463; /* Borde verde */
+    background-color: #f8f9f9; /* Fondo claro */
+    display: flex; /* Flexbox para centrar contenido */
+    flex-direction: column; /* Organiza el contenido en columna: Título arriba, texto abajo */
+    
+    text-align: center; /* Texto centrado */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave */
+    padding: 10px; /* Añadir espaciado dentro del cuadro */
+}
+
 @media (max-width: 720px) {
     .banner-button {
         font-size: 14px; /* Reduce el tamaño del texto en pantallas pequeñas si es necesario */
         padding: 10px 25px; /* Ajusta el tamaño del botón en dispositivos móviles */
     }
+
+    .about-us {
+        grid-template-areas:
+            "big-box"
+            "small-box-left"
+            "small-box-right"; /* Disposición vertical */
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .big-box {
+        height: auto; /* Permitir que el cuadro se ajuste dinámicamente */
+        padding: 15px; /* Reducir el espaciado interno */
+    }
+
+    .large-title {
+        font-size: 20px; /* Reducir tamaño del título */
+    }
+
+    .large-text {
+        font-size: 14px; /* Reducir tamaño del texto */
+    }
+
+    .small-boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 1200px; /* Limita el ancho del contenedor */
+        
+        
+    }
+
+    
+
 }
