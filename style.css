@@ -15,97 +15,215 @@ body{
 }
 
 
-nav{
+/* General */
+nav {
     background: #ecf0f1;
     height: 80px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.enlace{
-    position: absolute;
-    padding: 10px 40px;
+
+/* Imagen del nombre de la empresa */
+.nombre-empresa {
+    height: 40%; /* Ajusta el tamaño según necesites */
+    margin-left: 30px; /* Separación con el logo */
+    display: inline-block;
 }
-.logo{
+
+.enlace {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
     height: 65px;
 }
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
-nav ul li{
+
+/* Mostrar solo el logo para PC por defecto */
+.logo-pc {
     display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
 }
-nav ul li a{
+
+.logo-mobile {
+    display: none;
+}
+
+/* Menú principal */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
     color: #0c0b0b;
     font-size: 18px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
 }
-li a.active, li a:hover{
+
+nav ul li a:hover {
     background: #28b463;
-    transition: .5s;
-}
-.checkbtn{
-    font-size: 30px;
     color: #fff;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
+}
+
+/* Dropdown (menús desplegables) */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -25%;
+    background: #ecf0f1;
+    list-style: none;
+    padding: 0; /* Elimina cualquier padding extra del submenú */
+    margin: 0; /* Elimina cualquier margen adicional */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+nav ul li .dropdown-menu li {
+    margin: 0; /* Elimina márgenes entre los elementos */
+    padding: 0; /* Elimina padding extra de los elementos */
+}
+
+nav ul li .dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    color: #0c0b0b;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Imagen de perfil */
+nav ul li.profile {
+    margin-left: 20px;
+}
+
+nav ul li.profile img.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Dropdown del perfil */
+nav ul li.profile .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+/* Menú hamburguesa (para dispositivos pequeños) */
+.checkbtn {
+    font-size: 30px;
+    color: #000;
     cursor: pointer;
     display: none;
 }
+
 .checkbtn img {
-    height: 35px; /* Ajusta el tamaño de la imagen del menú hamburguesa */
+    height: 35px;
     width: 35px;
-} 
-#check{
+}
+
+#check {
     display: none;
 }
-section{
-    background: url() no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: calc(100vh - 80px);
-}
 
-@media (max-width: 768px){
-    .enlace{
-        padding-left: 20px;
+/* Estilos responsivos */
+@media (max-width: 720px) {
+    nav {
+        justify-content: space-between;
     }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
 
-@media (max-width: 480px){
-    .checkbtn{
+    .logo-pc {
+        display: none; /* Ocultar logo PC */
+    }
+
+    .logo-mobile {
+        display: inline-block; /* Mostrar logo móvil */
+        height: 70px; /* Puedes ajustar el tamaño si es necesario */
+    }
+
+
+    .nombre-empresa{
+        display: none;
+    }
+    /* Reorganización de elementos */
+    .enlace {
+        order: 1; /* Ícono de empresa a la izquierda */
+    }
+
+    .checkbtn {
+        order: 2; /* Menú hamburguesa a la derecha */
         display: block;
     }
-    ul{
+
+    nav ul {
         position: fixed;
         width: 100%;
         height: 100vh;
         background: #ecf0f1;
         top: 80px;
         left: -100%;
+        flex-direction: column;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
+        z-index: 999;
     }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
+
+    nav ul li {
+        margin: 20px 0;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 20px;
+        padding: 15px 20px;
     }
-    li a:hover, li a.active{
-        background: none;
-        color: #28b463;
+
+    nav ul li .dropdown-menu {
+        display: none; /* Se ocultan inicialmente */
+        position: static;
+        box-shadow: none;
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        text-align: left;
     }
-    #check:checked ~ ul{
-        left:0;
+
+    nav ul li.show .dropdown-menu {
+        display: block; /* Se muestran al tocar */
     }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .profile img.profile-img {
+        margin: 10px 0;
+    }
+}
+
+/* Fondo del cuerpo */
+section {
+    background: url() no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
 }
