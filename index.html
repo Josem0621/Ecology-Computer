@@ -7,6 +7,8 @@
     <link rel="icon" href="assets/iconoMB.png">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <nav>
     <input type="checkbox" id="check">
@@ -58,7 +60,6 @@
                 ofrecer a nuestros clientes una experiencia innovadora y sobre todo ecológica con nuestros ordenadores.
             </p>
         </div>
-    
         <!-- Contenedor para los cuadros pequeños -->
         <div class="small-boxes">
             <div class="small-box">
@@ -77,4 +78,99 @@
             </div>
         </div>
     </section>
+
+
+    <section class="services">
+        <div class="services-header">
+            <h2 class="services-title">Nuestros Servicios</h2>
+            <img class="services-image" src="assets/herramienta.png" alt="Imagen de Servicios">
+        </div>
+        <div class="services-list">
+            <a href="pagina-servicio1.html" class="service-item">
+                <h3 class="service-subtitle">Tienda Virtual</h3>
+                <img class="service-image" src="assets/Tienda.png" alt="Servicio 1">
+                <p class="service-description">Adquiere tu Eco Pc,
+                    componentes y/o accesorio</p>
+            </a>
+            <a href="pagina-servicio2.html" class="service-item">
+                <h3 class="service-subtitle">Mantenimiento</h3>
+                <img class="service-image" src="assets/Mantenimiento.png" alt="Servicio 2">
+                <p class="service-description">Soporte y reparación de 
+                    tu equipo de computo</p>
+            </a>
+            <a href="pagina-servicio3.html" class="service-item">
+                <h3 class="service-subtitle">Empresas</h3>
+                <img class="service-image" src="assets/Negocios.png" alt="Servicio 3">
+                <p class="service-description">Soporte para negocios interesados en adquirir nuestro servicio</p>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="reviews">
+        <div class="reviews-header">
+            <h2 class="reviews-title">Reseñas</h2>
+            <img src="assets/mano.png" alt="Imagen central de reseñas" class="reviews-image">
+        </div>
+        <div class="reviews-carousel-container">
+            <button class="arrow arrow-left" onclick="scrollCarousel(-1)">&#9664;</button>
+            <div class="reviews-carousel">
+                <div class="review-item">
+                    <div class="review-avatar">
+                        <img src="assets/Usuario1.png" alt="Avatar de Persona 1">
+                    </div>
+                    <p class="review-message">"Los computadores adquiridos en Ecology Computer funcionan de maravilla. Son rápidos, eficientes y amigables con el medio ambiente. ¡Totalmente recomendados!"</p>
+                    <p class="review-name">Ana María González</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar">
+                        <img src="assets/Usuario2.png" alt="Avatar de Persona 2">
+                    </div>
+                    <p class="review-message">"El servicio de mantenimiento de mi computador fue excepcional. El equipo de Ecology Computer es profesional y muy rápido. Mi equipo quedó como nuevo."</p>
+                    <p class="review-name">Juan Carlos Pérez</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar">
+                        <img src="assets/Usuario3.png" alt="Avatar de Persona 3">
+                    </div>
+                    <p class="review-message">"El servicio al cliente de Ecology Computer es de primera. Resolvieron todas mis dudas con paciencia y amabilidad. Sin duda, seguiré utilizando sus servicios."</p>
+                    <p class="review-name">Laura Martínez</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar">
+                        <img src="assets/Usuario4.png" alt="Avatar de Persona 4">
+                    </div>
+                    <p class="review-message">"Nuestra empresa adquirió equipos reacondicionados de Ecology Computer y no podríamos estar más satisfechos. Calidad excelente y un gran impacto positivo en el medio ambiente."</p>
+                    <p class="review-name">Fernando Rodríguez</p>
+                </div>
+            </div>
+            <button class="arrow arrow-right" onclick="scrollCarousel(1)">&#9654;</button>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <!-- Nombre de la empresa -->
+        <p class="footer-text">© 2024 Ecology Computer</p>
+    
+        <!-- Iconos de redes sociales -->
+        <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" class="social-link">
+                <i class="fab fa-facebook-f social-icon"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+                <i class="fab fa-twitter social-icon"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link">
+                <i class="fab fa-instagram social-icon"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+                <i class="fab fa-linkedin-in social-icon"></i>
+            </a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+
 </body>

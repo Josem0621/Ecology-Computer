@@ -38,54 +38,54 @@
 }
 
 
+
 /* Sección general "Acerca de nosotros" */
 .about-us {
     display: flex;
     flex-direction: column; /* Asegura que las secciones estén en columnas */
     gap: 20px; /* Espaciado entre el cuadro grande y el contenedor de cuadros pequeños */
     padding: 30px 10%;
+    margin-bottom: 40px; /* Agrega espacio abajo para separar de la sección siguiente */
 }
 
 /* Cuadro grande - Independiente */
 .big-box {
-    height: 300px; /* Tamaño inicial */
+    height: auto; /* Tamaño inicial */
     width: 100%; /* Ocupa todo el ancho */
     border: 5px solid #28b463; /* Borde verde */
     background-color: #f8f9f9; /* Fondo claro */
     padding: 20px; /* Espaciado interno */
     display: flex; /* Habilita flexbox */
     flex-direction: column; /* Asegura que el contenido esté en columnas */
-    justify-content: space-between; /* Espaciado entre título y texto */
     align-items: center; /* Centrado horizontal */
     text-align: center; /* Texto centrado */
     border-radius: 12px; /* Bordes redondeados */
 }
 
 .large-title {
-    font-size: 200%; /* Tamaño del título */
-    margin-bottom: 10px; /* Espaciado inferior del título */
+    font-size: 1.5em; /* Título grande, usa em para que sea relativo al tamaño del cuadro */
+    margin-bottom: 10px; /* Separación del texto */
     color: #28b463; /* Color del título */
 }
 
 .large-text {
-    font-size: 150%; /* Tamaño del texto */
-    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    font-size: 1.5em; /* Ajusta el tamaño del texto de acuerdo con el tamaño del cuadro */
     color: #333; /* Color del texto */
-    margin-top: 10px; /* Espaciado superior del texto */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
 }
 
 /* Contenedor de cuadros pequeños */
 .small-boxes {
     display: grid; /* Usa grid layout */
     grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales en pantallas grandes */
-    gap: 20px; /* Espaciado entre los cuadros */
-    margin-top: 20px; /* Espaciado superior respecto al cuadro grande */
+    gap: 32px; /* Espaciado entre los cuadros */
+    margin-top: 16px; /* Espaciado superior respecto al cuadro grande */
     
 }
 
 /* Cuadros pequeños */
 .small-box {
-    height: 200px; /* Tamaño inicial */
+    height: auto; /* Tamaño inicial */
     border: 5px solid #28b463; /* Borde verde */
     background-color: #f8f9f9; /* Fondo claro */
     display: flex; /* Flexbox para centrar contenido */
@@ -96,6 +96,97 @@
     border-radius: 12px; /* Bordes redondeados */
     transition: all 0.3s ease; /* Transición suave */
     padding: 10px; /* Añadir espaciado dentro del cuadro */
+    margin-bottom: 40px; /* Agrega espacio abajo para separar de la sección siguiente */
+
+}
+
+
+
+
+/* Sección de servicios */
+.services {
+    padding: 10px 10%; /* Espaciado superior e inferior */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    height: 570px;
+    
+}
+
+/* Contenedor de título e imagen */
+.services-header {
+    display: flex;
+    justify-content: center; /* Centra título e imagen horizontalmente */
+    align-items: center; /* Centra título e imagen verticalmente */
+    margin-bottom: 40px; /* Espaciado inferior */
+}
+
+/* Título */
+.services-title {
+    padding-left: 70px;
+    font-size: 2.5em;
+    color: #dac40d; /* Color verde */
+    font-weight: bold;
+    margin-right: 15px; /* Espaciado entre título e imagen */
+}
+
+/* Imagen de la sección */
+.services-image {
+    width: 5%; /* La imagen ocupa un 30% del ancho */
+    object-fit: cover; /* La imagen no se deforma */
+    border-radius: 8px;
+}
+
+/* Lista de servicios */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 20rem)); /* Definición de columnas */
+    gap: 20px; /* Espaciado entre los servicios */
+    justify-content: center; /* Centra la cuadrícula horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente en cada celda */
+    justify-items: center; /* Centra cada item en su celda */
+    max-width: 100%; /* Asegura que no se exceda el ancho del contenedor */
+    margin: 0 auto; /* Centra la cuadrícula en el contenedor */
+}
+
+/* Estilo para cada servicio */
+.service-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #28b463;
+    border: 3px solid #28b463; /* Borde verde */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none; /* Elimina subrayado de enlaces */
+    height: 400px;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Título de cada servicio */
+.service-subtitle {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Imagen del servicio */
+.service-image {
+    width: 90%; /* La imagen ocupa el 80% del ancho */
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px; /* Espaciado entre la imagen y la descripción */
+}
+
+/* Descripción del servicio */
+.service-description {
+    font-size: 1em;
+    color: #ecf0f1;
+    line-height: 1.5;
 }
 
 @media (max-width: 720px) {
@@ -118,11 +209,11 @@
     }
 
     .large-title {
-        font-size: 20px; /* Reducir tamaño del título */
+        font-size: 1.3em; /* Reducir tamaño del título */
     }
 
     .large-text {
-        font-size: 14px; /* Reducir tamaño del texto */
+        font-size: 1.3em; /* Reducir tamaño del texto */
     }
 
     .small-boxes {
@@ -130,10 +221,48 @@
         grid-template-columns: 1fr;
         gap: 20px;
         max-width: 1200px; /* Limita el ancho del contenedor */
-        
+        margin-bottom: 40px; /* Agrega espacio abajo para separar de la sección siguiente */
+
         
     }
 
     
+
+    .services {
+        padding: 10px 5%; /* Reduce el padding en pantallas pequeñas */
+        margin-top: 400px; /* Menor margen superior en pantallas pequeñas */
+        min-height: 1400px; /* Asegura un tamaño mínimo para la sección */
+        
+    }
+
+    .services-title{
+        padding-left: 20px;
+        font-size: 2em;
+    }
+
+    /* Imagen y texto de la sección de servicios */
+    .services-image {
+        width: 6%; /* La imagen ocupa todo el ancho disponible */
+        height: auto;
+    }
+
+    /* Estilo de cada servicio */
+    .service-item {
+        padding: 20px;
+    }
+
+    .service-subtitle {
+        font-size: 1.2em; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
+    }
+
+    .service-image {
+        width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+        height: auto;
+    }
+
+    .service-description {
+        font-size: 0.9em; /* Ajusta el tamaño del texto */
+    }
+
 
 }

@@ -153,6 +153,44 @@ nav ul li.profile .dropdown-menu {
     display: none;
 }
 
+
+/* Estilo del footer */
+.footer {
+    background-color: #28b463; /* Fondo verde */
+    color: white; /* Texto blanco */
+    padding: 20px 10%; /* Espaciado interno */
+    display: flex;
+    justify-content: space-between; /* Alinea el texto a la izquierda y los iconos a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Estilo del texto del footer */
+.footer-text {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    text-align: left; /* Alinea el nombre a la izquierda */
+}
+
+/* Contenedor de los iconos de redes sociales */
+.footer-socials {
+    display: flex;
+    gap: 15px; /* Espaciado entre los iconos */
+}
+
+/* Enlaces de los iconos de redes sociales */
+.social-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Color blanco */
+    font-size: 1.5em; /* Tamaño de los iconos */
+    transition: transform 0.3s ease-in-out; /* Animación para el hover */
+}
+
+/* Efecto hover */
+.social-link:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del icono cuando se pasa el mouse */
+}
+
 /* Estilos responsivos */
 @media (max-width: 720px) {
     nav {
@@ -223,6 +261,15 @@ nav ul li.profile .dropdown-menu {
 
     .profile img.profile-img {
         margin: 10px 0;
+    }
+
+    .footer {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        text-align: center; /* Centra el texto */
+    }
+    
+    .footer-socials {
+        margin-top: 10px;
     }
 }
 
