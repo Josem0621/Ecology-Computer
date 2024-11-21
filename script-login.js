@@ -16,6 +16,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
     // Verifica las credenciales
     if (correoIngresado === usuarioRegistrado.correo && contrasenaIngresada === usuarioRegistrado.contrasena) {
+        localStorage.setItem("usuarioIniciado", JSON.stringify({ isLoggedIn: true }));
         alert("Inicio de sesión exitoso. ¡Bienvenido!");
         // Redirige a la página principal
         window.location.href = "index.html";

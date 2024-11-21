@@ -30,12 +30,9 @@ document.getElementById("registro-form").addEventListener("submit", function(eve
 
 
 
-
-
-
 function scrollCarousel(direction) {
     const carousel = document.querySelector(".reviews-carousel");
-    const scrollAmount = 300; // Desplazamiento en píxeles
+    const scrollAmount = 100; // Desplazamiento en píxeles
     carousel.scrollBy({
         left: direction * scrollAmount,
         behavior: "smooth"

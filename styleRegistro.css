@@ -1,70 +1,70 @@
 /* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f2f2f2;
-}
 
+/* Contenedor principal del formulario */
 .form-container {
     background-color: #28a745;
     border-radius: 10px;
-    padding: 30px 20px;
-    width: 320px;
+    padding: 40px 30px; /* Aumenta el padding para un cuadro más grande */
+    width: 100%;
+    max-width: 500px; /* Establece un tamaño máximo para el cuadro */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
     text-align: center;
+    margin: 50px auto; /* Centra el formulario */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: auto;
 }
 
+/* Título */
 h2 {
     color: white;
     margin-bottom: 20px;
 }
 
+/* Contenedor de los campos de entrada */
 .input-group {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    width: 100%;
 }
 
+/* Campo de entrada */
 .input-group input {
-    width: 48%;
-    padding: 10px;
+    width: 48%; /* Los campos ocupan el 48% del ancho */
+    padding: 12px; /* Aumenta el tamaño de los inputs */
     border: none;
     border-radius: 5px;
     outline: none;
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="password"] {
-    font-size: 14px;
-}
-
+/* Botón de crear cuenta */
 .btn-crear {
     background-color: #ffc107;
     color: #fff;
     font-size: 16px;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 15px;
-    width: 100%;
+    margin-top: 20px;
+    width: 100%; /* El botón ocupa todo el ancho disponible */
     transition: background-color 0.3s;
 }
 
+/* Cambio de color cuando se pasa el mouse sobre el botón */
 .btn-crear:hover {
     background-color: #e0a800;
 }
 
+/* Enlaces de texto en el formulario */
 p {
     color: white;
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 14px;
 }
 
@@ -75,4 +75,27 @@ p a {
 
 p a:hover {
     text-decoration: underline;
+}
+
+/* Estilo del footer */
+.footer {
+    margin-top: 20vh;
+    background-color: #28b463; /* Fondo verde */
+    color: white; /* Texto blanco */
+    padding: 20px 10%; /* Espaciado interno */
+    display: flex;
+    justify-content: space-between; /* Alinea el texto a la izquierda y los iconos a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column; /* Los campos se apilan uno debajo del otro */
+        gap: 10px; /* Espacio entre los campos */
+    }
+
+    .input-group input {
+        width: 100%; /* Los inputs ocupan todo el ancho disponible */
+    }
 }

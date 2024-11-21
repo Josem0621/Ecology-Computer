@@ -16,30 +16,30 @@
         <i><img src="assets/menu-hamburguesa.png" alt=""></i>
     </label>
       
-    <a href="#" class="enlace">
+    <a href="index.html" class="enlace">
         <img src="assets/iconoPC.png" alt="Logo PC" class="logo logo-pc">
         <img src="assets/iconoMB.png" alt="Logo Móvil" class="logo logo-mobile">
         <img src="assets/Nombre.png" alt="Nombre de empresa" class="nombre-empresa">
     </a>
     <ul>
-        <li><a href="#">QUIENES SOMOS</a></li>
+        <li><a href="#about-us">QUIENES SOMOS</a></li>
         <li class="dropdown">
-            <a href="#">SERVICIOS</a>
+            <a href="#services">SERVICIOS</a>
             <ul class="dropdown-menu">
-                <li><a href="#">Tienda Virtual</a></li>
+                <li><a href="Tienda.html">Tienda Virtual</a></li>
                 <li><a href="#">Reparar</a></li>
                 <li><a href="#">Contáctanos</a></li>
             </ul>
         </li>
-        <li><a href="#">RESEÑAS</a></li>
+        <li><a href="#reviews">RESEÑAS</a></li>
         <li class="profile">
             <a href="#">
                 <img src="assets/UsuarioIcon.png" alt="Perfil" class="profile-img">
             </a>
             <ul class="dropdown-menu">
-                <li><a href="Registro.html">Registrarse</a></li>
-                <li><a href="#">Iniciar Sesión</a></li>
-                <li><a href="#">Cerrar Sesión</a></li>
+                <li id="register"><a href="Registro.html">Registrarse</a></li>
+                <li id="login"><a href="Inicio.html">Iniciar Sesión</a></li>
+                <li id="logout"><a href="#" class="logout-btn">Cerrar Sesión</a></li>
             </ul>
         </li>
     </ul>
@@ -50,7 +50,7 @@
         <button class="banner-button">CONOCER MÁS</button>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
         <!-- Cuadro superior -->
         <div class="big-box about-box">
             <h1 class="large-title">Quienes Somos</h1>
@@ -80,7 +80,7 @@
     </section>
 
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="services-header">
             <h2 class="services-title">Nuestros Servicios</h2>
             <img class="services-image" src="assets/herramienta.png" alt="Imagen de Servicios">
@@ -107,7 +107,7 @@
     </section>
 
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="reviews-header">
             <h2 class="reviews-title">Reseñas</h2>
             <img src="assets/mano.png" alt="Imagen central de reseñas" class="reviews-image">
@@ -170,6 +170,7 @@
         </div>
     </footer>
     
+    <script src="checklogin.js"></script>
     <script src="script.js"></script>
 
 

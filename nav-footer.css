@@ -136,6 +136,19 @@ nav ul li.profile .dropdown-menu {
     left: auto;
 }
 
+/* Estilo del botón de cerrar sesión */
+nav ul li .dropdown-menu li a.logout-btn {
+    color: #e74c3c;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li .dropdown-menu li a.logout-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+
 /* Menú hamburguesa (para dispositivos pequeños) */
 .checkbtn {
     font-size: 30px;
@@ -191,7 +204,11 @@ nav ul li.profile .dropdown-menu {
     transform: scale(1.2); /* Aumenta el tamaño del icono cuando se pasa el mouse */
 }
 
+
 /* Estilos responsivos */
+section[id]{
+    scroll-margin-top: 70px;
+}
 @media (max-width: 720px) {
     nav {
         justify-content: space-between;
