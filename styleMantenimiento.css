@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Contenedor principal del formulario */
+.form-container {
+    background-color: #28a745;
+    border-radius: 10px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 70%; /* Ajusta el ancho máximo */
+    margin: 50px auto; /* Centra el formulario */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.solicitud {
+    background-color: #28a745;
+    border-radius: 10px;
+    max-width: 70%; /* Ajusta el ancho máximo */
+    margin: 50px auto; /* Centra el formulario */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+p{
+    color: rgb(138, 101, 33);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del formulario */
+.service-container {
+    display: grid;
+
+    width: 100%;
+}
+
+/* Fila para dos columnas: Nombre y Celular */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+/* Input general */
+.input-group {
+    width: 100%; /* Cada input ocupa el ancho de su contenedor */
+}
+
+.input-group input {
+    width: 100%; /* Los campos ocupan el 100% del ancho */
+    padding: 12px; /* Aumenta el tamaño de los inputs */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+}
+
+/* Estilo para el contenedor del input cuando se muestra */
+#problema-input-container {
+    margin-top: 10px;  /* Espacio entre el checkbox y el input */
+    padding: 5px 0;
+}
+
+/* Estilo del textarea de descripción */
+#problema-descripcion {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el padding no haga que el campo sea más grande que el contenedor */
+    resize: vertical; /* Permite cambiar el tamaño verticalmente, pero no horizontalmente */
+    overflow-y: auto; /* Agrega scroll si el contenido excede el alto disponible */
+    font-family: "Nunito", sans-serif;
+}
+
+/* Botón de enviar ocupa toda la fila */
+.btn-enviar {
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Botón ocupa toda la fila */
+    transition: background-color 0.3s;
+}
+
+/* Cambio de color cuando se pasa el mouse sobre el botón */
+.btn-enviar:hover {
+    background-color: #e0a800;
+}
+
+/* Responsivo: Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    .input-row {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    .btn-enviar {
+        grid-column: span 1; /* Botón ocupa solo una columna */
+    }
+}

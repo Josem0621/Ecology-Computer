@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento</title>
+    <link rel="icon" href="assets/iconoMB.png">
+    <link rel="stylesheet" href="nav-footer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleMantenimiento.css">
+    <link rel="stylesheet" href="media.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i><img src="assets/menu-hamburguesa.png" alt=""></i>
+        </label>
+
+        <a href="index.html" class="enlace">
+            <img src="assets/iconoPC.png" alt="Logo PC" class="logo logo-pc">
+            <img src="assets/iconoMB.png" alt="Logo Móvil" class="logo logo-mobile">
+            <img src="assets/Nombre.png" alt="Nombre de empresa" class="nombre-empresa">
+        </a>
+        <ul>
+            <li><a href="#about-us">QUIENES SOMOS</a></li>
+            <li class="dropdown">
+                <a href="#services">SERVICIOS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Tienda.html">Tienda Virtual</a></li>
+                    <li><a href="#">Reparar</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </li>
+            <li><a href="#reviews">RESEÑAS</a></li>
+            <li class="profile">
+                <a href="#">
+                    <img src="assets/UsuarioIcon.png" alt="Perfil" class="profile-img">
+                </a>
+                <ul class="dropdown-menu">
+                    <li id="register"><a href="Registro.html">Registrarse</a></li>
+                    <li id="login"><a href="Inicio.html">Iniciar Sesión</a></li>
+                    <li id="logout"><a href="#" class="logout-btn">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>SERVICIO DE MANTENIMIENTO</h2>
+        <div class="service-container">
+            <form id="service-form">
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="text" id="service-name" placeholder="Nombre*" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="service-phone" placeholder="Celular*" required pattern="\d*"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="service-direction" placeholder="Dirección*" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="service-email" placeholder="Correo*" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="service-marca" placeholder="Marca*" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="service-model" placeholder="Modelo*" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="service-model" placeholder="Procesador">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="service-model" placeholder="Ram">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="service-model" placeholder="GPU">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="service-model" placeholder="Fuente de poder">
+                    </div>
+                    <p>Los campos con * son obligatorios</p>
+                    <div></div>
+                    <div class="input-grupo">
+                        <input type="checkbox" name="Problema" id="Problema" class="exclusive-checkbox"> Problema
+                        <!-- Contenedor que incluye el input para la descripción, oculto inicialmente -->
+                        <div id="problema-input-container" style="display: none;">
+                            <textarea id="problema-descripcion" placeholder="Descripción del problema" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-grupo">
+                        <input type="checkbox" name="Mantenimiento" id="Mantenimiento" class="exclusive-checkbox"> Mantenimiento
+                    </div>
+                </div>
+                
+                <!-- Botón -->
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Nombre de la empresa -->
+        <p class="footer-text">© 2024 Ecology Computer</p>
+
+        <!-- Iconos de redes sociales -->
+        <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" class="social-link">
+                <i class="fab fa-facebook-f social-icon"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+                <i class="fab fa-twitter social-icon"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link">
+                <i class="fab fa-instagram social-icon"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+                <i class="fab fa-linkedin-in social-icon"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const problemaCheckbox = document.getElementById('Problema');
+        const mantenimientoCheckbox = document.getElementById('Mantenimiento');
+        const errorMessage = document.getElementById('error-message');
+        const form = document.getElementById('solicitud-form');
+        const problemaInputContainer = document.getElementById('problema-input-container');
+    
+        // Función para asegurar que solo uno de los checkboxes esté marcado
+        function toggleCheckboxSelection() {
+            if (problemaCheckbox.checked) {
+                mantenimientoCheckbox.checked = false;
+                problemaInputContainer.style.display = 'block'; // Muestra el input de descripción
+            } else {
+                problemaInputContainer.style.display = 'none'; // Oculta el input si "Problema" no está seleccionado
+            }
+    
+            if (mantenimientoCheckbox.checked) {
+                problemaCheckbox.checked = false;
+                problemaInputContainer.style.display = 'none'; // Oculta el input si "Mantenimiento" está seleccionado
+            }
+        }
+    
+        // Escuchar el evento de cambio en ambos checkboxes
+        problemaCheckbox.addEventListener('click', toggleCheckboxSelection);
+        mantenimientoCheckbox.addEventListener('click', toggleCheckboxSelection);
+    
+        // Validar que se seleccione solo uno al enviar el formulario
+        form.addEventListener('submit', function(event) {
+            if (!problemaCheckbox.checked && !mantenimientoCheckbox.checked) {
+                errorMessage.style.display = 'block'; // Muestra el mensaje de error si ninguno está seleccionado
+                event.preventDefault(); // Previene el envío del formulario
+            } else {
+                errorMessage.style.display = 'none'; // Oculta el mensaje de error si alguno está seleccionado
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
