@@ -1,0 +1,119 @@
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Product Listings Section */
+main {
+    padding: 2em;
+    background-color: #f9f9f9;
+    min-height: 200vh; /* Asegura que ocupa al menos la altura de la pantalla */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+/* Product List */
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr)); /* Diseño flexible */
+    gap: 2em; /* Espaciado entre productos */
+    width: 100%; /* Asegura que ocupa el ancho completo */
+}
+
+/* Individual Product Card */
+.producto {
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.producto .precio {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em; /* Espaciado superior para separarlo del contenido */
+    position: relative; /* Asegura que siga el flujo del contenido */
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 1em; /* Reduce el padding en pantallas más pequeñas */
+        min-height: 150vh; /* Incrementa la altura mínima en pantallas pequeñas */
+        
+    }
+
+    .lista-productos {
+        gap: 1em; /* Reduce el espacio entre productos */
+    }
+
+    .producto {
+        padding: 0.8em; /* Reduce el padding en cada tarjeta */
+    }
+
+    .producto .precio {
+        font-size: 1em; /* Ajusta el tamaño de fuente del precio */
+    }
+}
+/* Ajustes Responsivos */
+@media (max-width: 1200px) {
+    main {
+        min-height: 200vh; /* Incrementa la altura mínima en pantallas medianas */
+    }
+}
+
+@media (max-width: 1183px) {
+    main {
+        min-height: 300vh; /* Deja que se ajuste automáticamente al contenido en pantallas muy pequeñas */
+    }
+}
+
+@media (max-width: 895px) {
+    main {
+        min-height: 500vh; /* Deja que se ajuste automáticamente al contenido en pantallas muy pequeñas */
+    }
+}
+@media (max-width: 560px) {
+    main {
+        min-height: 1100vh; /* Deja que se ajuste automáticamente al contenido en pantallas muy pequeñas */
+    }
+}
