@@ -42,6 +42,20 @@ h2 {
     font-size: 16px; /* Aumenta el tamaño de la fuente */
 }
 
+/* Estilo para el menú desplegable */
+.input-group select {
+    width: 48%; /* Asegura que tenga el mismo ancho que los otros campos */
+    padding: 12px; /* Igual padding que los inputs */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px; /* Igual tamaño de fuente que los inputs */
+    background-color: white; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    cursor: pointer;
+}
+
 /* Botón de crear cuenta */
 .btn-crear {
     background-color: #ffc107;

@@ -52,9 +52,14 @@
                 <input type="text" id="apellido" placeholder="Apellido" required>
             </div>
             <div class="input-group">
-                <input type="text" id="genero" placeholder="Genero" required>
+                <select id="genero" required>
+                    <option value="" disabled selected>Seleccionar Género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
                 <input type="number" id="edad" placeholder="Edad" required>
-            </div>
+            </div>            
             <div class="input-group">
                 <input type="email" id="correo" placeholder="Correo" required>
                 <input type="password" id="contrasena" placeholder="Contraseña" required>

@@ -45,7 +45,7 @@
     flex-direction: column; /* Asegura que las secciones estén en columnas */
     gap: 20px; /* Espaciado entre el cuadro grande y el contenedor de cuadros pequeños */
     padding: 30px 10%;
-    margin-bottom: 40px; /* Agrega espacio abajo para separar de la sección siguiente */
+    margin-bottom: auto; /* Agrega espacio abajo para separar de la sección siguiente */
 }
 
 /* Cuadro grande - Independiente */
@@ -101,6 +101,35 @@
 }
 
 
+/* Estilo para el contenedor del banner publicitario */
+.banner-anuncio {
+    display: flex;
+    justify-content: center; /* Centra el banner horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin: 15px auto; /* Espaciado arriba y abajo del banner */
+    padding: 10px; /* Espaciado interno alrededor del banner */
+    height: 50vh;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle efecto */
+    max-width: 1100px; /* Ancho máximo del banner */
+}
+
+/* Estilo para la imagen del banner */
+.banner-anuncio img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho disponible */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto hover en la imagen */
+.banner-anuncio img:hover {
+    transform: scale(1.05); /* Amplía ligeramente la imagen al pasar el mouse */
+}
+
+/* Estilo para enlaces */
+.banner-anuncio a {
+    text-decoration: none; /* Elimina subrayado del enlace */
+}
 
 
 /* Sección de servicios */
@@ -226,11 +255,13 @@
         
     }
 
-    
+    .banner-anuncio{
+        margin-top: 400px;
+    }
 
     .services {
         padding: 10px 5%; /* Reduce el padding en pantallas pequeñas */
-        margin-top: 400px; /* Menor margen superior en pantallas pequeñas */
+       
         min-height: 1400px; /* Asegura un tamaño mínimo para la sección */
         
     }
@@ -265,4 +296,14 @@
     }
 
 
+}
+@media (max-width: 375px) {
+    .banner-anuncio{
+        margin-top: 600px;
+    }
+}
+@media (max-width: 320px) {
+    .banner-anuncio{
+        margin-top: 800px;
+    }
 }

@@ -74,11 +74,17 @@ footer p {
     margin: 0;
 }
 
+
+@media (max-width: 1368px) {
+    main {
+        min-height: 220vh; /* Incrementa la altura mínima en pantallas medianas */
+    }
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     main {
         padding: 1em; /* Reduce el padding en pantallas más pequeñas */
-        min-height: 150vh; /* Incrementa la altura mínima en pantallas pequeñas */
+        min-height: 480vh; /* Incrementa la altura mínima en pantallas pequeñas */
         
     }
 
@@ -94,26 +100,24 @@ footer p {
         font-size: 1em; /* Ajusta el tamaño de fuente del precio */
     }
 }
-/* Ajustes Responsivos */
-@media (max-width: 1200px) {
+@media (max-width: 480px) {
     main {
-        min-height: 200vh; /* Incrementa la altura mínima en pantallas medianas */
+        min-height: 1050vh; /* Incrementa la altura mínima en pantallas medianas */
+    }
+}
+@media (max-width: 425px) {
+    main {
+        min-height: 920vh; /* Incrementa la altura mínima en pantallas medianas */
+    }
+}
+@media (max-width: 375px) {
+    main {
+        min-height: 870vh; /* Incrementa la altura mínima en pantallas medianas */
     }
 }
 
-@media (max-width: 1183px) {
+@media (max-width: 320px) {
     main {
-        min-height: 300vh; /* Deja que se ajuste automáticamente al contenido en pantallas muy pequeñas */
-    }
-}
-
-@media (max-width: 895px) {
-    main {
-        min-height: 500vh; /* Deja que se ajuste automáticamente al contenido en pantallas muy pequeñas */
-    }
-}
-@media (max-width: 560px) {
-    main {
-        min-height: 1100vh; /* Deja que se ajuste automáticamente al contenido en pantallas muy pequeñas */
+        min-height: 800vh; /* Incrementa la altura mínima en pantallas medianas */
     }
 }
